@@ -19,6 +19,12 @@
               "type": "string"
             }
           },
+          "propertyMatch": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          },
           "url": {
             "description": "An absolute URL to the schema location",
             "type": "string",
