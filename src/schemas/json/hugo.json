@@ -560,6 +560,7 @@
             "type": "string",
             "enum": [
               ":default",
+              ":fileModTime",
               ":filename",
               ":git",
               "date",
@@ -577,6 +578,7 @@
           "items": {
             "type": "string",
             "enum": [
+              ":default",
               "expiryDate",
               "unpublishdate"
             ]
@@ -589,7 +591,9 @@
           "items": {
             "type": "string",
             "enum": [
+              ":default",
               ":fileModTime",
+              ":filename",
               ":git",
               "date",
               "lastmod",
@@ -606,7 +610,13 @@
           "items": {
             "type": "string",
             "enum": [
+              ":default",
+              ":fileModTime",
+              ":filename",
+              ":git",
               "date",
+              "lastmod",
+              "modified",
               "pubdate",
               "publishDate"
             ]
