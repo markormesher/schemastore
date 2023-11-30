@@ -2129,6 +2129,9 @@
                   "type": "integer",
                   "default": 0,
                   "minimum": 0
+                },
+                "keepComments": {
+                  "type": "boolean"
                 }
               },
               "additionalProperties": false
