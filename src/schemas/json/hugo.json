@@ -292,6 +292,11 @@
           ]
         }
       }
+    },
+    "mergeType": {
+      "description": "Merge configuration from themes\nhttps://gohugo.io/getting-started/configuration/#merge-configuration-from-themes",
+      "type": "string",
+      "enum": ["none", "shallow", "deep"]
     }
   },
   "properties": {
@@ -317,6 +322,9 @@
       "description": "The build options\nhttps://gohugo.io/getting-started/configuration/#configure-build",
       "type": "object",
       "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
+        },
         "useResourceCacheWhen": {
           "description": "The time when to use the cached resources in `/resources/_gen` for `PostCSS` and `ToCSS`\nhttps://gohugo.io/getting-started/configuration/#configure-build",
           "type": "string",
@@ -379,6 +387,11 @@
         "modules": {
           "dir": ":cacheDir/modules",
           "maxAge": -1
+        }
+      },
+      "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
         }
       },
       "patternProperties": {
@@ -575,6 +588,9 @@
         "publishDate": ["publishDate", "date"]
       },
       "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
+        },
         "date": {
           "description": "\nhttps://gohugo.io/getting-started/configuration/#configure-dates",
           "type": "array",
@@ -686,6 +702,9 @@
         }
       },
       "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
+        },
         "resampleFilter": {
           "description": "The default resample filter\nhttps://gohugo.io/content-management/image-processing/#resampling-filter",
           "type": "string",
@@ -785,6 +804,11 @@
       "description": "The language options\nhttps://gohugo.io/content-management/multilingual/#configure-languages",
       "type": "object",
       "default": {},
+      "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
+        }
+      },
       "patternProperties": {
         ".": {
           "description": "The language options",
@@ -879,6 +903,9 @@
         }
       },
       "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
+        },
         "asciidocExt": {
           "title": "AsciidocExt options",
           "description": "AsciidocExt options\nhttps://docs.asciidoctor.org/asciidoctor/latest/cli/man1/asciidoctor/#processing-information",
@@ -1422,6 +1449,9 @@
       "description": "The media type's options\nhttps://gohugo.io/templates/output-formats/#media-types",
       "type": "object",
       "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
+        },
         "application/javascript": {
           "description": "\nhttps://gohugo.io/templates/output-formats/#media-types",
           "type": "array",
@@ -1802,6 +1832,11 @@
       "title": "media menu options",
       "description": "The menu options\nhttps://gohugo.io/content-management/menus/#add-non-content-entries-to-a-menu",
       "type": "object",
+      "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
+        }
+      },
       "patternProperties": {
         ".": {
           "description": "The menu\nhttps://gohugo.io/content-management/menus/#add-non-content-entries-to-a-menu",
@@ -1900,6 +1935,9 @@
         }
       },
       "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
+        },
         "disableCSS": {
           "description": "\nhttps://gohugo.io/getting-started/configuration/#configure-minify",
           "type": "boolean",
@@ -2080,6 +2118,9 @@
         "workspace": ""
       },
       "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
+        },
         "noVendor": {
           "description": "The glob pattern matching the paths to skip when vendoring\nhttps://gohugo.io/hugo-modules/configuration/#module-configuration-top-level",
           "type": "string",
@@ -2308,6 +2349,9 @@
       "description": "The permalink options\nhttps://gohugo.io/content-management/urls/#permalinks",
       "type": "object",
       "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
+        },
         "page": {
           "$ref": "#/definitions/permalinkDefinition"
         },
@@ -2350,6 +2394,9 @@
         "toLower": false
       },
       "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
+        },
         "threshold": {
           "description": "\nhttps://gohugo.io/content-management/related/#top-level-config-options",
           "type": "integer",
@@ -2458,6 +2505,9 @@
         }
       },
       "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
+        },
         "enableInlineShortcodes": {
           "description": "\nhttps://gohugo.io/about/security-model/#security-policy",
           "type": "boolean",
@@ -2558,6 +2608,9 @@
         "priority": 0.5
       },
       "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
+        },
         "changefreq": {
           "description": "\nhttps://gohugo.io/templates/sitemap-template/#configure-sitemapxml",
           "type": "string",
@@ -2593,6 +2646,9 @@
         "tag": "tags"
       },
       "properties": {
+        "_merge": {
+          "$ref": "#/definitions/mergeType"
+        },
         "tag": {
           "description": "The default taxonomy\nhttps://gohugo.io/content-management/taxonomies#configure-taxonomies",
           "type": "string",
