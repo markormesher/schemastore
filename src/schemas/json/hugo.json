@@ -576,7 +576,10 @@
           "uniqueItems": true,
           "items": {
             "type": "string",
-            "enum": ["expiryDate", "unpublishdate"]
+            "enum": [
+              "expiryDate",
+              "unpublishdate"
+            ]
           }
         },
         "lastmod": {
@@ -602,7 +605,11 @@
           "uniqueItems": true,
           "items": {
             "type": "string",
-            "enum": ["publishDate", "date", "pubdate"]
+            "enum": [
+              "publishDate",
+              "date",
+              "pubdate"
+            ]
           }
         }
       },
