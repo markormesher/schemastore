@@ -657,11 +657,7 @@
           "uniqueItems": true,
           "items": {
             "type": "string",
-            "enum": [
-              ":default",
-              "expiryDate",
-              "unpublishdate"
-            ]
+            "enum": [":default", "expiryDate", "unpublishdate"]
           }
         },
         "lastmod": {
