@@ -269,6 +269,29 @@
     "hugoVersion": {
       "type": "string",
       "pattern": "^\\d+\\.\\d+\\.\\d+.*$"
+    },
+    "permalinkDefinition": {
+      "type": "object",
+      "patternProperties": {
+        ".": {
+          "description": "The permalink",
+          "type": "string",
+          "examples": [
+            ":year",
+            ":month",
+            ":monthname",
+            ":day",
+            ":weekday",
+            ":weekdayname",
+            ":yearday",
+            ":section",
+            ":sections",
+            ":title",
+            ":slug",
+            ":filename"
+          ]
+        }
+      }
     }
   },
   "properties": {
@@ -2278,24 +2301,15 @@
       "title": "permalink options",
       "description": "The permalink options\nhttps://gohugo.io/content-management/urls/#permalinks",
       "type": "object",
-      "patternProperties": {
-        ".": {
-          "description": "The permalink",
-          "type": "string",
-          "examples": [
-            ":year",
-            ":month",
-            ":monthname",
-            ":day",
-            ":weekday",
-            ":weekdayname",
-            ":yearday",
-            ":section",
-            ":sections",
-            ":title",
-            ":slug",
-            ":filename"
-          ]
+      "properties": {
+        "page": {
+          "$ref": "#/definitions/permalinkDefinition"
+        },
+        "section": {
+          "$ref": "#/definitions/permalinkDefinition"
+        },
+        "term": {
+          "$ref": "#/definitions/permalinkDefinition"
         }
       }
     },
