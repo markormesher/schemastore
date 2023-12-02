@@ -271,27 +271,22 @@
       "pattern": "^\\d+\\.\\d+\\.\\d+.*$"
     },
     "permalinkDefinition": {
-      "type": "object",
-      "patternProperties": {
-        ".": {
-          "description": "The permalink",
-          "type": "string",
-          "examples": [
-            ":year",
-            ":month",
-            ":monthname",
-            ":day",
-            ":weekday",
-            ":weekdayname",
-            ":yearday",
-            ":section",
-            ":sections",
-            ":title",
-            ":slug",
-            ":filename"
-          ]
-        }
-      }
+      "description": "The permalink",
+      "type": "string",
+      "examples": [
+        ":year",
+        ":month",
+        ":monthname",
+        ":day",
+        ":weekday",
+        ":weekdayname",
+        ":yearday",
+        ":section",
+        ":sections",
+        ":title",
+        ":slug",
+        ":filename"
+      ]
     },
     "mergeType": {
       "description": "Merge configuration from themes\nhttps://gohugo.io/getting-started/configuration/#merge-configuration-from-themes",
